@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon"> 
+    <!-- Style Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/> 
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <section class="nav-bar fixed top-0 left-0 w-full bg-white h-[80px] grid place-content-center grid-cols-[150px_150px] xl:grid-cols-[150px_auto_150px] items-center justify-between py-[10px] px-5 md:px-[50px] z-20">
+    
+    <a href="index.html">
+        <img src="assets/images/logo/logo-black.webp" class="w-[136px] h-[45px]" alt="Logo">
+    </a>
+
+    <ul class="hidden xl:flex items-center justify-center gap-18">
+    <li>
+        <a href="#" class="nav-link">
+            <span>H</span>
+            <span>o</span>
+            <span>m</span>
+            <span>e</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="nav-link">
+            <span>A</span>
+            <span>b</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="nav-link">
+            <span>P</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+        </a>
+    </li>
+
+        <li>
+        <a href="#" class="nav-link">
+            <span>S</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="nav-link">
+            <span>T</span>
+            <span>e</span>
+            <span>a</span>
+            <span>m</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="nav-link">
+            <span>B</span>
+            <span>l</span>
+            <span>o</span>
+            <span>g</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="#" class="nav-link">
+            <span>C</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+        </a>
+        </li>
+    </ul>
+
+    <div class="flex gap-3 items-center justify-end relative">
+
+    <button class="cursor-pointer py-1 px-3 menu-search-btn" onclick="handle_nav_search()">
+        <i class="fa-solid fa-magnifying-glass text-[18px]"></i>
+    </button>
+
+    <div class="h-[20px] w-[1px] bg-gray-200"></div>
+
+    <button>
+        <img src="assets/images/icons/menu-black.webp" class="-mt-1 cursor-pointer py-2 px-3" alt="Menu Bar">
+    </button>
+
+    <div class="nav-search opacity-0 invisible translate-y-4 transition-all duration-300 ease-in-out absolute top-[50px] right-5 bg-white4 p-4 rounded">
+        <input type="text" placeholder="Search" class="w-[250px] h-12 bg-white py-1 px-2 border-0 outline-0 shadow-none rounded" name="" id="">
+    </div>
+
+    </div>
+
+  </section>
+
+  <!-- Hero -->
+  <section class="hero pt-[120px] md:pt-[130px] lg:pt-[160px] lg:pb-[100px] relative lg:h-screen">
+
+    <div class="container relative">
+
+        <div class="max-w-[550px] md:max-w-full">
+            <h2 class="text-2xl font-semibold uppercase relative after:ml-5 after:inline-block after:absolute after:top-1/2 after:translate-y-1/2  after:bg-primary after:h-[1px] after:w-[90px] after:content-['']">DIGITAL</h2>
+
+            <div class="hero-title relative mt-2">
+                <h1>MARK</h1>
+                <h1 class="to-right">ETING</h1>
+            </div>
+            
+            <div class="hero-para pt-24 lg:pt-5 lg:pb-10 xl:pt-10 xl:pb-10">
+                <p class="max-w-[300px] text-black3 text-[18px]">Static and dynamic secure code review can prevent a day before you product is even released. We can integrate with your dev environment</p>
+            </div>
+
+            <div class="hidden lg:block mt-[100px] absolute scroll-down w-fit animate-bounce duration-200 py-5 px-2 border border-[#a8a8a8] rounded-2xl">
+                <img src="assets/images/icons/arrow-down-sm.png" alt="Arrow Down">
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="hero-left-shape absolute left-0 top-1/2 -translate-y-1/2 -z-1">
+        <img src="assets/images/shape/5.png" alt="Shape Left">
+    </div>
+
+    <div class="hero-right-shape absolute right-5 top-24 md:right-20 md:top-40 -z-1">
+        <img src="assets/images/icons/6.png" alt="Star Shape">
+    </div>
+
+    <div class="hero-video-btn hidden lg:flex items-center gap-3 w-fit absolute top-[32%] right-[15%]">
+
+        <div class="h-30 w-30 rounded-full overflow-hidden relative border border-gray-400 cursor-pointer" onclick="handle_hero_video()">
+
+            <video class="hero-video h-full w-full object-cover object-top-right rounded-full scale-500 absolute left-1/2 top-1/2" autoplay loop muted>
+                <source src="assets/video/hero-3.mp4">
+            </video>
+
+            <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/images/icons/play-icon.png" alt="Play Icon">
+
+        </div>
+
+        <h5 class="uppercase font-semibold cursor-pointer" onclick="handle_hero_video()">Watch Video <br> Intro</h5>
+    </div>
+
+    <div class="hero-video-wrapper fixed top-0 left-0 mt-20 h-screen w-full invisible opacity-0 transition-opacity duration-700 ease-in-out" id="heroVideoWrapper">
+        <video class="h-full w-full object-cover" autoplay muted loop>
+            <source src="assets/video/hero-3.mp4">
+        </video>
+
+
+        <div class="absolute top-[32%] right-[15%] flex items-center gap-8">
+          <img src="assets/images/icons/play-icon.png" alt="Play Icon">
+  
+          <h5 class="text-white uppercase font-semibold cursor-pointer" onclick="handle_hero_video()">Close Video <br> Intro</h5>
+        </div>
+    </div>
+
+    <div class="hero-img flex justify-end lg:absolute right-0 mt-10 lg:mt-[-40px] xl:mt-[-30px] -z-1">
+       <img class="max-w-full md:max-w-[720px] lg:max-w-[800px] xl:max-w-[1000px] 2xl:max-w-full 2xl:h-auto w-full object-cover object-left h-[300px]" src="assets/images/hero-img.jpg" alt="Hero Img">
+    </div>
+
+  </section>
+
+  <!-- Brands -->
+  <section class="brand py-[50px] md:py-[80px] lg:pt-[100px] lg:pb-[100px] xl:pt-[150px] xl:pb-[100px] 2xl:pt-[250px] 2xl:pb-[200px]">
+    <div class="container">
+        <h2 class="text-center uppercase text-[18px]">We worked with global largest brands</h2>
+
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-y-15 justify-between">
+            <img class="block mx-auto" src="assets/images/1.webp">
+            <img class="block mx-auto" src="assets/images/2.webp">
+            <img class="block mx-auto" src="assets/images/3.webp">
+            <img class="block mx-auto" src="assets/images/4.webp">
+            <img class="block mx-auto" src="assets/images/5.webp">
+            <img class="block mx-auto" src="assets/images/6.webp">
+        </div>
+
+
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about-us relative bg-primary">
+
+    <div class="container">
+
+        <div class="grid items-center py-10 md:py-0 grid-cols-1 md:grid-cols-[40%_60%]">
+          
+            <div class="about-left">
+                <img class="w-full" src="assets/images/about.webp" alt="About Img">
+            </div>
+
+            <div class="about-right relative pt-[50px] md:pt-[150px] md:pl-5 lg:pl-16 xl:pl-20 2xl:pl-30">
+
+                <div class="absolute hidden md:block w-[1px] h-[100px] bg-black3 top-0 md:left-10 lg:left-36 xl:left-50 2xl:left-60"></div>
+
+                <h2 class="text-white uppercase text-[18px]">Who We Are</h2>
+                <h1 class="text-white text-5xl md:text-4xl lg:text-6xl font-medium uppercase py-5">We are leading <br>
+                digital marketing <br>
+                agency.</h1>
+
+                <div class="about-para border-0 md:border-l border-[#555] max-w-[400px] pt-5 md:pt-10 md:pb-[50px] xl:pb-[100px] md:ml-5 lg:ml-20 xl:ml-30 md:pl-10">
+
+                    <p class="text-black4 text-[18px] mb-10">We’re a team of strategic mdigital marketing
+                    working globally with largest brands, We believe
+                    that progress only happens when you refused to
+                    play things safe. We combine ideas and behaviors,
+                    and insights with design, technological data to
+                    produce brand experiences that customers love
+                    our services.</p>
+
+                    <a href="#" class="cmn-btn1">
+                        <span class="text-inherit z-10">Explore Us</span>
+                        <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <img class="about-shape hidden lg:block absolute right-0 top-[30%]" src="assets/images/shape/7.png" alt="About Shape">
+
+  </section>
+
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

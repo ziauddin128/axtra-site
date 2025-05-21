@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-kanit: "Kanit", sans-serif;
+
+  --color-primary: #121212;
+  --color-white4: #f0f0f0;
+  --color-black3: #555;
+  --color-black4: #999;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1420px;
+}
+
+@layer base
+{
+    *{
+        @apply font-kanit text-primary;
+    }
+}
+
+@layer components
+{
+  .container
+  {
+    @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] mx-auto px-[20px] md:px-[50px];
+  }
+}
+
+@layer utilities
+{
+  .nav-link 
+  {
+    @apply text-[16px] font-normal uppercase  flex gap-0 items-center py-[27px];
+  }
+
+  .hero-title h1 
+  {
+    @apply text-[90px] md:text-[130px] lg:text-[180px] xl:text-[250px] 2xl:text-[306px] font-bold uppercase leading-[.82] lg:leading-[.92] tracking-wide;
+  }
+
+  .hero-title h1.to-right
+  {
+    @apply absolute right-0;
+  }
+
+  .cmn-btn1 {
+    @apply h-[150px] w-[150px] border border-black3 rounded-full flex items-center justify-center gap-2 text-black4 text-[16px] relative overflow-hidden transition-colors duration-500;
+  }
+
+  .cmn-btn1 i 
+  {
+    @apply -rotate-45;
+  }
+
+  .cmn-btn1::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full bg-white transition-transform duration-300 ease-in-out rounded-full;
+    transform: scale(0);
+    transform-origin: top left;
+    z-index: 0;
+  }
+
+  .cmn-btn1:hover::before {
+    transform: scale(1);
+  }
+
+  .cmn-btn1:hover {
+    @apply text-primary;
+  }
+
+}
+
+
+
+
