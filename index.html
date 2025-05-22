@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Marketing</title>
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon"> 
+
     <!-- Style Css -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <!-- Font Awesome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/> 
+
+    <!-- wiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Locomotive Css -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> -->
 </head>
 <body>
 
@@ -114,125 +125,129 @@
 
   </section>
 
-  <!-- Hero -->
-  <section class="hero pt-[120px] md:pt-[130px] lg:pt-[160px] lg:pb-[100px] relative lg:h-screen">
+  <main id="main">
 
-    <div class="container relative">
+    <!-- Hero -->
+    <section class="hero pt-[120px] md:pt-[130px] lg:pt-[160px] lg:pb-[100px] relative">
 
-        <div class="max-w-[550px] md:max-w-full">
-            <h2 class="text-2xl font-semibold uppercase relative after:ml-5 after:inline-block after:absolute after:top-1/2 after:translate-y-1/2  after:bg-primary after:h-[1px] after:w-[90px] after:content-['']">DIGITAL</h2>
+        <div class="container relative">
 
-            <div class="hero-title relative mt-2">
-                <h1>MARK</h1>
-                <h1 class="to-right">ETING</h1>
+            <div class="max-w-[550px] md:max-w-full">
+                <h2 class="text-2xl font-semibold uppercase relative after:ml-5 after:inline-block after:absolute after:top-1/2 after:translate-y-1/2  after:bg-primary after:h-[1px] after:w-[90px] after:content-['']">DIGITAL</h2>
+
+                <div class="hero-title relative mt-2">
+                    <h1>MARK</h1>
+                    <h1 class="to-right">ETING</h1>
+                </div>
+                
+                <div class="hero-para pt-24 lg:pt-5 lg:pb-10 xl:pt-10 xl:pb-10">
+                    <p class="max-w-[300px] text-black3 text-[18px]">Static and dynamic secure code review can prevent a day before you product is even released. We can integrate with your dev environment</p>
+                </div>
+
+                <div class="hidden lg:block mt-[100px] absolute scroll-down w-fit animate-bounce duration-200 py-5 px-2 border border-[#a8a8a8] rounded-2xl">
+                    <img src="assets/images/icons/arrow-down-sm.png" alt="Arrow Down">
+                </div>
             </div>
-            
-            <div class="hero-para pt-24 lg:pt-5 lg:pb-10 xl:pt-10 xl:pb-10">
-                <p class="max-w-[300px] text-black3 text-[18px]">Static and dynamic secure code review can prevent a day before you product is even released. We can integrate with your dev environment</p>
-            </div>
-
-            <div class="hidden lg:block mt-[100px] absolute scroll-down w-fit animate-bounce duration-200 py-5 px-2 border border-[#a8a8a8] rounded-2xl">
-                <img src="assets/images/icons/arrow-down-sm.png" alt="Arrow Down">
-            </div>
+        
         </div>
-    
-    </div>
 
-    <div class="hero-left-shape absolute left-0 top-1/2 -translate-y-1/2 -z-1">
-        <img src="assets/images/shape/5.png" alt="Shape Left">
-    </div>
+        <div class="hero-left-shape absolute left-0 top-1/2 -translate-y-1/2 -z-1">
+            <img src="assets/images/shape/5.png" alt="Shape Left">
+        </div>
 
-    <div class="hero-right-shape absolute right-5 top-24 md:right-20 md:top-40 -z-1">
-        <img src="assets/images/icons/6.png" alt="Star Shape">
-    </div>
+        <div class="hero-right-shape absolute right-5 top-24 md:right-20 md:top-40 -z-1">
+            <img src="assets/images/icons/6.png" alt="Star Shape">
+        </div>
 
-    <div class="hero-video-btn hidden lg:flex items-center gap-3 w-fit absolute top-[32%] right-[15%]">
+        <div class="hero-video-btn hidden lg:flex items-center gap-3 w-fit absolute top-[32%] right-[15%]">
 
-        <div class="h-30 w-30 rounded-full overflow-hidden relative border border-gray-400 cursor-pointer" onclick="handle_hero_video()">
+            <div class="h-30 w-30 rounded-full overflow-hidden relative border border-gray-400 cursor-pointer" onclick="handle_hero_video()">
 
-            <video class="hero-video h-full w-full object-cover object-top-right rounded-full scale-500 absolute left-1/2 top-1/2" autoplay loop muted>
+                <video class="hero-video h-full w-full object-cover object-top-right rounded-full scale-500 absolute left-1/2 top-1/2" autoplay loop muted>
+                    <source src="assets/video/hero-3.mp4">
+                </video>
+
+                <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/images/icons/play-icon.png" alt="Play Icon">
+
+            </div>
+
+            <h5 class="uppercase font-semibold cursor-pointer" onclick="handle_hero_video()">Watch Video <br> Intro</h5>
+        </div>
+
+        <div class="hero-video-wrapper fixed top-0 left-0 mt-20 h-screen w-full invisible opacity-0 transition-opacity duration-700 ease-in-out" id="heroVideoWrapper">
+            <video class="h-full w-full object-cover" autoplay muted loop>
                 <source src="assets/video/hero-3.mp4">
             </video>
 
-            <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="assets/images/icons/play-icon.png" alt="Play Icon">
 
+            <div class="absolute top-[32%] right-[15%] flex items-center gap-8">
+            <img src="assets/images/icons/play-icon.png" alt="Play Icon">
+    
+            <h5 class="text-white uppercase font-semibold cursor-pointer" onclick="handle_hero_video()">Close Video <br> Intro</h5>
+            </div>
         </div>
 
-        <h5 class="uppercase font-semibold cursor-pointer" onclick="handle_hero_video()">Watch Video <br> Intro</h5>
-    </div>
-
-    <div class="hero-video-wrapper fixed top-0 left-0 mt-20 h-screen w-full invisible opacity-0 transition-opacity duration-700 ease-in-out" id="heroVideoWrapper">
-        <video class="h-full w-full object-cover" autoplay muted loop>
-            <source src="assets/video/hero-3.mp4">
-        </video>
-
-
-        <div class="absolute top-[32%] right-[15%] flex items-center gap-8">
-          <img src="assets/images/icons/play-icon.png" alt="Play Icon">
-  
-          <h5 class="text-white uppercase font-semibold cursor-pointer" onclick="handle_hero_video()">Close Video <br> Intro</h5>
-        </div>
-    </div>
-
-    <div class="hero-img flex justify-end lg:absolute right-0 mt-10 lg:mt-[-40px] xl:mt-[-30px] -z-1">
-       <img class="max-w-full md:max-w-[720px] lg:max-w-[800px] xl:max-w-[1000px] 2xl:max-w-full 2xl:h-auto w-full object-cover object-left h-[300px]" src="assets/images/hero-img.jpg" alt="Hero Img">
-    </div>
-
-  </section>
-
-  <!-- Brands -->
-  <section class="brand py-[50px] md:py-[80px] lg:pt-[100px] lg:pb-[100px] xl:pt-[150px] xl:pb-[100px] 2xl:pt-[250px] 2xl:pb-[200px]">
-    <div class="container">
-        <h2 class="text-center uppercase text-[18px]">We worked with global largest brands</h2>
-
-        <div class="mt-16 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-y-15 justify-between">
-            <img class="block mx-auto" src="assets/images/1.webp">
-            <img class="block mx-auto" src="assets/images/2.webp">
-            <img class="block mx-auto" src="assets/images/3.webp">
-            <img class="block mx-auto" src="assets/images/4.webp">
-            <img class="block mx-auto" src="assets/images/5.webp">
-            <img class="block mx-auto" src="assets/images/6.webp">
+        <div class="hero-img flex justify-end lg:absolute right-0 mt-10 lg:mt-[-40px] xl:mt-[-30px] -z-1">
+        <img class="max-w-full md:max-w-[720px] lg:max-w-[800px] xl:max-w-[1000px] 2xl:max-w-full 2xl:h-auto w-full object-cover object-left h-[300px]" src="assets/images/hero-img.jpg" alt="Hero Img">
         </div>
 
+    </section>
 
-    </div>
-  </section>
+    <!-- Brands -->
+    <section class="brand py-[50px] md:py-[80px] lg:pt-[100px] lg:pb-[100px] xl:pt-[150px] xl:pb-[100px] 2xl:pt-[250px] 2xl:pb-[200px]">
+        <div class="container">
+            <h2 class="text-center uppercase text-[18px]">We worked with global largest brands</h2>
 
-  <!-- About Us -->
-  <section class="about-us relative bg-primary">
-
-    <div class="container">
-
-        <div class="grid items-center py-10 md:py-0 grid-cols-1 md:grid-cols-[40%_60%]">
-          
-            <div class="about-left">
-                <img class="w-full" src="assets/images/about.webp" alt="About Img">
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-y-15 justify-between">
+                <img class="block mx-auto" src="assets/images/1.webp">
+                <img class="block mx-auto" src="assets/images/2.webp">
+                <img class="block mx-auto" src="assets/images/3.webp">
+                <img class="block mx-auto" src="assets/images/4.webp">
+                <img class="block mx-auto" src="assets/images/5.webp">
+                <img class="block mx-auto" src="assets/images/6.webp">
             </div>
 
-            <div class="about-right relative pt-[50px] md:pt-[150px] md:pl-5 lg:pl-16 xl:pl-20 2xl:pl-30">
 
-                <div class="absolute hidden md:block w-[1px] h-[100px] bg-black3 top-0 md:left-10 lg:left-36 xl:left-50 2xl:left-60"></div>
+        </div>
+    </section>
 
-                <h2 class="text-white uppercase text-[18px]">Who We Are</h2>
-                <h1 class="text-white text-5xl md:text-4xl lg:text-6xl font-medium uppercase py-5">We are leading <br>
-                digital marketing <br>
-                agency.</h1>
+    <!-- About Us -->
+    <section class="about-us relative bg-primary">
 
-                <div class="about-para border-0 md:border-l border-[#555] max-w-[400px] pt-5 md:pt-10 md:pb-[50px] xl:pb-[100px] md:ml-5 lg:ml-20 xl:ml-30 md:pl-10">
+        <div class="container">
 
-                    <p class="text-black4 text-[18px] mb-10">We’re a team of strategic mdigital marketing
-                    working globally with largest brands, We believe
-                    that progress only happens when you refused to
-                    play things safe. We combine ideas and behaviors,
-                    and insights with design, technological data to
-                    produce brand experiences that customers love
-                    our services.</p>
+            <div class="grid items-center py-10 md:py-0 grid-cols-1 md:grid-cols-[40%_60%]">
+            
+                <div class="about-left">
+                    <img class="w-full" src="assets/images/about.webp" alt="About Img">
+                </div>
 
-                    <a href="#" class="cmn-btn1">
-                        <span class="text-inherit z-10">Explore Us</span>
-                        <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
-                    </a>
+                <div class="about-right relative pt-[50px] md:pt-[150px] md:pl-5 lg:pl-16 xl:pl-20 2xl:pl-30">
 
+                    <div class="absolute hidden md:block w-[1px] h-[100px] bg-black3 top-0 md:left-10 lg:left-36 xl:left-50 2xl:left-60"></div>
+
+                    <h2 class="text-white uppercase text-[18px]">Who We Are</h2>
+                    <h1 class="text-white text-5xl md:text-4xl lg:text-6xl font-medium uppercase py-5">We are leading <br>
+                    digital marketing <br>
+                    agency.</h1>
+
+                    <div class="about-para border-0 md:border-l border-[#555] max-w-[400px] pt-5 md:pt-10 md:pb-[50px] xl:pb-[100px] md:ml-5 lg:ml-20 xl:ml-30 md:pl-10">
+
+                        <p class="text-black4 text-[18px] mb-10">We’re a team of strategic mdigital marketing
+                        working globally with largest brands, We believe
+                        that progress only happens when you refused to
+                        play things safe. We combine ideas and behaviors,
+                        and insights with design, technological data to
+                        produce brand experiences that customers love
+                        our services.</p>
+
+                        <a href="#" class="cmn-btn1">
+                            <span class="text-inherit z-10">Explore Us</span>
+                            <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                        </a>
+
+
+                    </div>
 
                 </div>
 
@@ -240,13 +255,630 @@
 
         </div>
 
-    </div>
+        <img class="about-shape hidden lg:block absolute right-0 top-[30%]" src="assets/images/shape/7.png" alt="About Shape">
 
-    <img class="about-shape hidden lg:block absolute right-0 top-[30%]" src="assets/images/shape/7.png" alt="About Shape">
+    </section>
 
-  </section>
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+
+            <div class="services_block pt-[50px] md:pt-[130px] md:pb-[100px] md:pl-[100px] xl:pl-[300px] relative after:hidden md:after:block  after:absolute after:top-0 after:md:left-[180px] after:lg:left-[250px] after:xl:left-[450px] after:content-[''] after:h-full after:w-[1px] after:bg-white4 after:-z-1">
+
+                <h2 class="text-[18px] text-black3 uppercase bg-white">Services</h2>
+
+                <h1 class="pt-5 pb-5 md:pb-10 uppercase text-4xl xl:text-6xl font-semibold bg-white">Our marketing <br> Services</h1>
+
+                <p class="text-[18px] bg-white text-black3 max-w-[400px] w-full md:ml-[100px] lg:ml-[180px] md:pt-5 pb-5">Consumers today rely heavily on digital means to research products. We research a brand of blend engaging with it, according to the meanwhile, 51% of consumers say they use Google to research products before buying.</p>
+            </div>
 
 
+            <div class="service-list mt-5 md:mt-10">
+
+                <div class="service-item">
+
+                    <h3>Search Engine <br> Optimization</h3>
+
+                    <div>
+                        <p>We help brands stand out through aweful, elegant visual design. Our design mainly philosophy.</p>
+
+                        <ul>
+                            <li>+ Logo Design</li>
+                            <li>+ Advertisement</li>
+                            <li>+ Promotion</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-item__right">
+                        <a href="#" class="cmn-btn2">
+                            <span class="text-inherit z-10">Details</span>
+                            <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                        </a>
+                    </div>
+
+                    <img src="assets/images/service-01.jpg">
+
+                </div>
+
+                <div class="service-item">
+
+                    <h3>Email <br> Marketing</h3>
+
+                    <div>
+                        <p>We help brands stand out through aweful, elegant visual design. Our design mainly philosophy.</p>
+
+                        <ul>
+                            <li>+ Logo Design</li>
+                            <li>+ Advertisement</li>
+                            <li>+ Promotion</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-item__right">
+                        <a href="#" class="cmn-btn2">
+                            <span class="text-inherit z-10">Details</span>
+                            <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                        </a>
+                    </div>
+
+                    <img src="assets/images/service-02.png">
+
+                </div>
+
+                <div class="service-item">
+
+                    <h3>Content <br> Marketing</h3>
+
+                    <div>
+                        <p>We help brands stand out through aweful, elegant visual design. Our design mainly philosophy.</p>
+
+                        <ul>
+                            <li>+ Logo Design</li>
+                            <li>+ Advertisement</li>
+                            <li>+ Promotion</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-item__right">
+                        <a href="#" class="cmn-btn2">
+                            <span class="text-inherit z-10">Details</span>
+                            <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                        </a>
+                    </div>
+
+                    <img src="assets/images/service-03.jpg">
+
+                </div>
+
+                <div class="service-item">
+
+                    <h3>Social <br> Marketing</h3>
+
+                    <div>
+                        <p>We help brands stand out through aweful, elegant visual design. Our design mainly philosophy.</p>
+
+                        <ul>
+                            <li>+ Logo Design</li>
+                            <li>+ Advertisement</li>
+                            <li>+ Promotion</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-item__right">
+                        <a href="#" class="cmn-btn2">
+                            <span class="text-inherit z-10">Details</span>
+                            <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                        </a>
+                    </div>
+
+                    <img src="assets/images/service-04.jpg">
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section class="work bg-primary mt-20 py-[80px]">
+        <div class="container">
+
+            <h2 class="text-white uppercase text-[18px] mb-4">Featured <br> Work</h2>
+
+            <div class="work-slider">
+                 <div class="swiper workSwiper relative">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="relative work-slide__item">
+
+                              <h2>
+                                <span class="text-inherit">Benjon</span>
+                                <span class="text-inherit">Website</span>
+                                <span class="text-inherit">2012</span>
+                              </h2>  
+
+                              <img class="block" src="assets/images/work-01.jpg">
+
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="relative work-slide__item">
+
+                              <h2>
+                                <span class="text-inherit">Benjon</span>
+                                <span class="text-inherit">Website</span>
+                                <span class="text-inherit">2012</span>
+                              </h2>  
+
+                              <img class="block" src="assets/images/work-02.jpg">
+
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="relative work-slide__item">
+
+                              <h2>
+                                <span class="text-inherit">Benjon</span>
+                                <span class="text-inherit">Website</span>
+                                <span class="text-inherit">2012</span>
+                              </h2>  
+
+                              <img class="block" src="assets/images/work-03.jpg">
+
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="relative work-slide__item">
+
+                              <h2>
+                                <span class="text-inherit">Benjon</span>
+                                <span class="text-inherit">Website</span>
+                                <span class="text-inherit">2012</span>
+                              </h2>  
+
+                              <img class="block" src="assets/images/work-04.jpg">
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-button-next after:hidden">
+                        <i class="fa-solid fa-arrow-right text-inherit text-[22px]"></i>
+                    </div>
+                    <div class="swiper-button-prev after:hidden">
+                        <i class="fa-solid fa-arrow-left text-inherit text-[22px]"></i>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <script>
+        var swiper = new Swiper(".workSwiper", {
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+
+    <!-- Testimonials -->
+    <section class="testimonials pb-[50px] lg:py-[200px] bg-[url('../images/testimonial-bg.png')] bg-cover bg-center relative">
+
+
+        <div class="container">
+
+            <div class="testimonial-slider max-w-[700px] w-full mx-auto">
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+
+                                <img src="assets/images/icons/quote.png" alt="Quote">
+
+                                <h4>When we talk about Alts, we do not mean a typical business partner, but rather a team that collaborates with us daily, always there for us when we encounter difficulties and celebrate achievements. We see in Alts our best ally for success!</h4>
+
+                                <h3>MARIA D. HALK</h3>
+                                <p>Managing Director</p>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+
+                                <img src="assets/images/icons/quote.png" alt="Quote">
+
+                                <h4>When we talk about Alts, we do not mean a typical business partner, but rather a team that collaborates with us daily, always there for us when we encounter difficulties and celebrate achievements. We see in Alts our best ally for success!</h4>
+
+                                <h3>Json Carloos</h3>
+                                <p>Technical Expert</p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-button-next after:hidden">
+                        <i class="fa-solid fa-arrow-right text-inherit text-[22px]"></i>
+                    </div>
+                    <div class="swiper-button-prev after:hidden">
+                        <i class="fa-solid fa-arrow-left text-inherit text-[22px]"></i>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="testi-img-box hidden lg:block absolute top-0 left-0 h-full w-full">
+
+            <img class="testi_img absolute lg:top-[80px] lg:left-[150px] xl:top-[100px] xl:left-[30%]" src="assets/images/testi-img-01.webp">
+
+            <img class="testi_img absolute md:top-[100px] md:right-[20%] xl:top-[100px] xl:right-[30%]" src="assets/images/testi-img-02.webp">
+
+            <img class="testi_img absolute md:top-[300px] md:left-[5%] xl:top-[200px] xl:left-[5%]" src="assets/images/testi-img-03.webp">
+
+
+            <img class="testi_img absolute lg:bottom-[5%] lg:left-[5%] xl:bottom-[5%] xl:left-[10%] lg:w-[300px]" src="assets/images/testi-img-04.webp">
+
+            <img class="testi_img absolute bottom-[10%] right-[6%]" src="assets/images/testi-img-05.webp">
+
+            <img class="testi_img absolute bottom-[5%] right-[16%]" src="assets/images/testi-img-06.webp">
+
+
+        </div>
+
+
+    </section>
+
+    <script>
+        var swiper = new Swiper(".testimonialSwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            speed: 800,
+        });
+    </script>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+
+        <div class="why-us__one hidden xl:flex justify-center items-center bg-[#fffaf0] h-[calc(100vh-80px)] w-full">
+            <h1 class="text-[200px] font-medium text-center uppercase leading-[1]">why <br>choose us</h1>
+        </div>
+
+        <div class="why-us__two bg-[#f3ecec] lg:h-[calc(100vh-80px)] w-full py-[50px] lg:py-[20px] relative lg:flex items-center">
+
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+
+                    <div class="why-use-left text-center lg:text-left">
+
+                        <h4 class="text-3xl lg:text-[18px] uppercase font-medium">why <br> choose us</h4>
+
+                        <h1 class="my-10 lg:mt-20 lg:mb-10 text-3xl lg:text-4xl  xl:text-6xl font-medium uppercase">Keword,Research Strategy, Survey, & Analytics</h1>
+
+                        <p class="text-[18px] lg:pl-14 xl:pl-20">Attention, we take out our round glasses and our sweater with elbow patches to go back to the origins of the user experience: the first mention of the user and its importance was born in the</p>
+
+                        <div class="my-10 lg:mt-20 lg:pl-14 xl:pl-20 flex items-center justify-center lg:justify-start flex-wrap gap-1">
+                            <a href="#" class="border border-primary px-3 text-[14px] font-medium rounded-[30px] hover:bg-primary hover:text-white hover:duration-200 ease-in uppercase">Google</a>
+                            <a href="#" class="border border-primary px-3 text-[14px] font-medium rounded-[30px] hover:bg-primary hover:text-white hover:duration-200 ease-in uppercase">Pinterest</a>
+                            <a href="#" class="border border-primary px-3 text-[14px] font-medium rounded-[30px] hover:bg-primary hover:text-white hover:duration-200 ease-in uppercase">Instagram</a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="why-use-right lg:pl-30 flex flex-col justify-between gap-5">
+
+
+                        <div class="about-box flex justify-center lg:justify-start items-center gap-6">
+
+                            <div class="about-box__circl h-[100px] min-w-[100px] md:h-[150px] md:min-w-[150px] rounded-full flex items-center justify-center border-2 border-primary">
+                                <h2 class="text-3xl lg:text-4xl font-medium">60%</h2>
+                            </div>
+
+                            <div class="about-box__content">
+                                <h3 class="uppercase text-2xl font-medium mb-2">Strategy</h3>
+                                <p class="text-[16px] max-w-[250px] w-full">Your marketing strategy optimizing performances doesn’t have to be a guessing game.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="about-box flex justify-center lg:justify-start items-center gap-6 md:-ml-30">
+
+                            <div class="about-box__circle h-[100px] min-w-[100px] md:h-[150px] md:min-w-[150px] rounded-full flex items-center justify-center border-2 border-primary">
+                                <h2 class="text-3xl lg:text-4xl font-medium">95%</h2>
+                            </div>
+
+                            <div class="about-box__content">
+                                <h3 class="uppercase text-2xl font-medium mb-2">Audience</h3>
+                                <p class="text-[16px] max-w-[250px] w-full">Your marketing strategy optimizing performances doesn’t have to be a guessing game.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="about-box flex justify-center lg:justify-start items-center gap-6">
+
+                            <div class="about-box__circle h-[100px] min-w-[100px] md:h-[150px] md:min-w-[150px] rounded-full flex items-center justify-center border-2 border-primary">
+                                <h2 class="text-3xl lg:text-4xl font-medium">70%</h2>
+                            </div>
+
+                            <div class="about-box__content">
+                                <h3 class="uppercase text-2xl font-medium mb-2">Keyword</h3>
+                                <p class="text-[16px] max-w-[250px] w-full">Your marketing strategy optimizing performances doesn’t have to be a guessing game.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <img class="absolute hidden lg:block bottom-[120px] left-[10px] xl:bottom-[14%] xl:left-[2%] " src="assets/images/shape/8.png" alt="Shape">
+
+        </div>
+
+
+        <div class="why-us__three py-[50px] lg:py-[20px] bg-[#fffaf0] lg:h-[calc(100vh-80px)] w-fulll lg:flex items-center">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+
+                    <div class="customer-left grid grid-cols-2 justify-between gap-y-20 md:gap-y-14 lg:gap-y-20 h-full items-center">
+
+                        <div class="text-center lg:text-left">
+                            <h1 class="text-[50px] lg:text-[100px] uppercase leading-[1]">25k</h1>
+                            <p class="text-[18px] uppercase text-black3">Project <br> completed</p>
+                        </div>
+
+                        <div class="text-center lg:text-left">
+                            <h1 class="text-[50px] lg:text-[100px]  uppercase leading-[1]">8k</h1>
+                            <p class="text-[18px] uppercase text-black3">Happy <br> customer</p>
+                        </div>
+
+                        <div class="text-center lg:text-left">
+                            <h1 class="text-[50px] lg:text-[100px]  uppercase leading-[1]">15</h1>
+                            <p class="text-[18px] uppercase text-black3">Years <br> experience</p>
+                        </div>
+
+                        <div class="text-center lg:text-left">
+                            <h1 class="text-[50px] lg:text-[100px]  uppercase leading-[1]">98</h1>
+                            <p class="text-[18px] uppercase text-black3">Awards <br> Achievements</p>
+                        </div>
+
+                    </div>
+
+                    <div class="customer-right mt-10 lg:mt-0">
+                        <img class="w-full" src="assets/images/counter-3.webp" alt="Customer">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="why-us__four bg-[#e0e3cc] py-[50px] lg:py-[20px] lg:h-[calc(100vh-80px)] w-fulll lg:flex justify-center items-center">
+
+            <div class="text-center max-w-[1000px] w-full mx-auto">
+
+                <p class="text-[24px]">Have you project in mind?</p>
+
+                <p class="text-4xl md:text-6xl lg:text-8xl mt-10 mb-10 lg:mb-16">Let’s make something great together!</p>
+
+                <a href="#" class="cmn-btn2 cmn-btn2-large block mx-auto">
+                    <span class="text-inherit z-10">Contact Us</span>
+                    <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="price py-[50px] md:py-[100px] bg-[#f3ecec]">
+        <div class="container">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-20">
+
+                <div class="price-content">
+                    <h2 class="text-[18px] uppercase text-black3">Pricing Table</h2>
+                    <h1 class="text-[40px] md:text-[60px] uppercase font-medium leading-[1] mt-5 mb-14">Be kind to your mind</h1>
+
+                    
+                    <div class="price-accordion">
+                        
+                        <h2>
+                            <button
+                                type="button"
+                                class="accordion-button flex justify-between w-full py-4 font-medium text-left border-t border-primary cursor-pointer text-[18px]"
+                                aria-expanded="false"
+                                aria-controls="accordion-content-1"
+                                id="accordion-button-1">
+                                Design should enrich our day
+
+                                <svg class="w-5 h-5" fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" ><title>plus</title><path d="M232 280L64 280 64 232 232 232 232 64 280 64 280 232 448 232 448 280 280 280 280 448 232 448 232 280Z" /></svg>
+
+                            </button>
+                        </h2>
+                        <div id="accordion-content-1" class="hidden pb-4">
+                          <p class="text-black3 text-[16px]">Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people</p>
+                        </div>
+
+                        <h2>
+                            <button
+                                type="button"
+                                class="accordion-button flex justify-between w-full py-4 font-medium text-left border-t border-primary cursor-pointer text-[18px]"
+                                aria-expanded="false"
+                                aria-controls="accordion-content-2"
+                                id="accordion-button-2">
+                                Bring their individual experience and creative
+
+                                <svg class="w-5 h-5" fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" ><title>plus</title><path d="M232 280L64 280 64 232 232 232 232 64 280 64 280 232 448 232 448 280 280 280 280 448 232 448 232 280Z" /></svg>
+
+                            </button>
+                        </h2>
+                        <div id="accordion-content-2" class="hidden pb-4">
+                          <p class="text-black3 text-[16px]">This is the second `$item's` accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes.</p>
+                        </div>
+
+                        <h2>
+                            <button
+                                type="button"
+                                class="accordion-button flex justify-between w-full py-4 font-medium text-left border-t border-primary cursor-pointer text-[18px]"
+                                aria-expanded="false"
+                                aria-controls="accordion-content-3"
+                                id="accordion-button-3">
+                                Human centred design to challenges
+                               
+                                <svg class="w-5 h-5" fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" ><title>plus</title><path d="M232 280L64 280 64 232 232 232 232 64 280 64 280 232 448 232 448 280 280 280 280 448 232 448 232 280Z" /></svg>
+
+                            </button>
+                        </h2>
+                        <div id="accordion-content-3" class="hidden pb-4">
+                          <p class="text-black3 text-[16px]">Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people</p>
+                        </div>
+
+                        <h2>
+                            <button
+                                type="button"
+                                class="accordion-button flex justify-between w-full py-4 font-medium text-left border-t border-primary cursor-pointer text-[18px]"
+                                aria-expanded="false"
+                                aria-controls="accordion-content-4"
+                                id="accordion-button-4">
+                               Design should enrich our day
+
+                                <svg class="w-5 h-5" fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" ><title>plus</title><path d="M232 280L64 280 64 232 232 232 232 64 280 64 280 232 448 232 448 280 280 280 280 448 232 448 232 280Z" /></svg>
+
+                            </button>
+                        </h2>
+                        <div id="accordion-content-4" class="hidden pb-4">
+                          <p class="text-black3 text-[16px]">Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people</p>
+                        </div>
+
+                        <h2>
+                            <button
+                                type="button"
+                                class="accordion-button flex justify-between w-full py-4 font-medium text-left border-t border-primary cursor-pointer text-[18px]"
+                                aria-expanded="false"
+                                aria-controls="accordion-content-5"
+                                id="accordion-button-5">
+                               Developing core web applications
+
+                               <svg class="w-5 h-5" fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" ><title>plus</title><path d="M232 280L64 280 64 232 232 232 232 64 280 64 280 232 448 232 448 280 280 280 280 448 232 448 232 280Z" /></svg>
+
+                            </button>
+                        </h2>
+                        <div id="accordion-content-5" class="hidden pb-4">
+                          <p class="text-black3 text-[16px]">Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people</p>
+                        </div>
+                     
+                    </div>
+
+                </div>
+
+                <div class="price-card-box mt-8 lg:mt-0">
+
+                    <div class="price-card relative bg-primary">
+                        <div class="price-card__left h-[40px] min-w-[40px] border border-[#ff9776] bg-[#ff9776] rounded flex justify-center items-center">
+                           <i class="fa-solid fa-check text-primary text-[18px]"></i> 
+                        </div>
+                        
+                        <div class="price-card__right flex-1">
+
+                            <div class="flex justify-between items-center gap-1">
+                                <span class="text-white tag border-white">Yearly</span>
+                                <h3 class="text-white">$129<span class="text-white">.99</span></h3>
+                            </div>
+
+                            <h2 class="text-white">14 days free</h2>
+                            <p class="text-black4 md:max-w-[60%] w-full">Subscription fee is $129.99 USD and automatically renews each year.</p>
+
+
+                        </div>
+
+
+                        <div class="price-value absolute top-[-15px] right-[15px] bg-[#ff9776] text-white text-[16px] px-3 py-1 rounded">
+                            Best Value
+                        </div>
+
+                    </div>
+
+                    <div class="price-card relative bg-white mt-4">
+
+                        <div class="price-card__left h-[40px] min-w-[40px] border-2 border-[#ccc] bg-[#fff] rounded flex justify-center items-center">
+                           <i class="fa-solid fa-check text-primary text-[18px]"></i> 
+                        </div>
+                        
+                        <div class="price-card__right flex-1">
+
+                            <div class="flex justify-between items-center gap-1">
+                                <span class="tag border-primary">Monthly</span>
+                                <h3>$12<span>.99</span></h3>
+                            </div>
+
+                            <h2>14 days free</h2>
+                            <p class="md:max-w-[60%] w-full">Subscription fee is $129.99 USD and automatically renews each year.</p>
+
+
+                        </div>
+                       
+
+                    </div>
+
+                    <a href="#" class="cmn-btn2 mt-10 md:mt-16 lg:mt-20">
+                        <span class="text-inherit z-10">Try It Free Now</span>
+                        <i class="fa-solid fa-arrow-right text-inherit z-10"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    
+
+  </main>
+
+
+   <!-- Locomotive -->
+  <!--  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+
+   <!-- GSap -->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+ -->
+   <!-- Scroll Trigger -->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> 
+ -->
+
+  <!-- Cmn Script -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -6,7 +6,10 @@
   --font-kanit: "Kanit", sans-serif;
 
   --color-primary: #121212;
+
+  --color-white2: #efefef;
   --color-white4: #f0f0f0;
+
   --color-black3: #555;
   --color-black4: #999;
 
@@ -30,6 +33,114 @@
   {
     @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] mx-auto px-[20px] md:px-[50px];
   }
+
+  .service-item
+  {
+    @apply grid grid-cols-1 gap-10 md:gap-6 lg:gap-0 md:grid-cols-[24%_40%_30%] lg:grid-cols-[30%_50%_20%] py-[40px] md:pt-[60px] md:pb-[80px] border-t border-white2 relative;
+  }
+
+  .service-item:last-child
+  {
+    @apply border-b border-white2;
+  }
+
+  .service-item h3 
+  {
+    @apply font-medium text-3xl md:text-2xl lg:text-4xl uppercase leading-[1.4];
+  }
+
+  .service-item p 
+  {
+    @apply text-[18px] mb-5;
+  }
+
+  .service-item ul li 
+  {
+    @apply text-[18px] mt-1;
+  }
+
+  .service-item__right 
+  {
+    @apply flex items-center justify-start md:justify-end;
+  }
+
+  .service-item img 
+  {
+    @apply opacity-0 pointer-events-none h-[140%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999];
+  }
+
+
+  .work-slide__item
+  {
+    @apply flex items-center justify-end;
+  }
+
+  .work-slide__item img 
+  {
+    @apply w-full md:w-[450px] lg:w-[600px];
+  }
+
+  .work-slide__item h2 
+  {
+    @apply absolute flex flex-col left-0 uppercase font-medium text-[50px] sm:text-[70px] md:text-[120px] lg:text-[150px] xl:text-[180px] leading-[1] text-white;
+  }
+
+  .work-slide__item h2 span:nth-child(2)
+  {
+    @apply ml-[25%];
+  }
+
+
+  .testimonial-item
+  {
+    @apply text-center;
+  }
+
+  .testimonial-item img 
+  {
+    @apply block mx-auto;
+  }  
+
+  .testimonial-item h4 
+  {
+    @apply text-xl md:text-2xl italic my-5 md:my-14; 
+  }
+
+  .testimonial-item h3 
+  {
+      @apply text-2xl md:text-3xl font-medium uppercase;
+  } 
+
+  .testimonial-item p 
+  {
+    @apply mt-2 uppercase text-black3 font-normal text-[14px];
+  }
+  
+
+  .price-card
+  {
+    @apply pt-12 pb-8 px-8 rounded-lg flex items-center gap-5 md:gap-8;
+  }
+
+  .price-card .tag 
+  {
+    @apply border rounded-2xl py-1 px-3 text-[14px] uppercase; 
+  }
+  
+  .price-card h3 
+  {
+    @apply text-3xl md:text-4xl;
+  }
+   .price-card h3 span 
+   {
+     @apply text-[18px];
+   }
+  
+   .price-card h2 
+   {
+    @apply text-2xl font-medium uppercase my-2; 
+   }
+
 }
 
 @layer utilities
@@ -49,7 +160,8 @@
     @apply absolute right-0;
   }
 
-  .cmn-btn1 {
+  .cmn-btn1 
+  {
     @apply h-[150px] w-[150px] border border-black3 rounded-full flex items-center justify-center gap-2 text-black4 text-[16px] relative overflow-hidden transition-colors duration-500;
   }
 
@@ -73,6 +185,185 @@
   .cmn-btn1:hover {
     @apply text-primary;
   }
+
+
+  .cmn-btn2 
+  {
+    @apply h-[160px] w-[160px] border border-black4 rounded-full flex items-center justify-center gap-2 text-black3 text-[16px] relative overflow-hidden transition-colors duration-500;
+  }
+
+  .cmn-btn2-large
+  {
+    @apply h-[160px] w-[160px] lg:h-[220px] lg:w-[220px];
+  }
+
+  .cmn-btn2 i 
+  {
+    @apply -rotate-45;
+  }
+
+  .cmn-btn2::before 
+  {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full bg-primary transition-transform duration-300 ease-in-out rounded-full;
+    transform: scale(0);
+    transform-origin: top left;
+    z-index: 0;
+  }
+
+  .cmn-btn2:hover::before {
+    transform: scale(1);
+  }
+
+  .cmn-btn2:hover 
+  {
+    @apply text-white;
+  }
+
+  .work-slider .swiper-pagination
+  {
+    @apply absolute flex gap-2;
+    top: 0px !important;
+    left: 30% !important;
+    height: fit-content !important;
+    width: fit-content !important;
+  }
+
+  @media (max-width : 991px) 
+  {
+    .work-slider .swiper-pagination
+    {
+      top: 10px !important;
+      left: 2% !important; 
+    }
+  }
+
+  @media (min-width : 992px) and (max-width : 1200px)
+  {
+    .work-slider .swiper-pagination
+    {
+       left: 15% !important; 
+    }
+  }
+
+  .work-slider .swiper-pagination,
+  .work-slider .swiper-pagination span 
+  {
+    @apply text-6xl;
+    color: white !important;
+  }
+
+  .work-slider .swiper-pagination .swiper-pagination-total
+  {
+     @apply text-4xl;
+  }
+
+  .work-slider .swiper-button-prev,
+  .work-slider .swiper-button-next
+  {
+    height: 60px !important;
+    width: 60px !important;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white !important;
+    transition: all .5s ease;
+    visibility: hidden;
+    opacity: 0;
+
+    &:hover 
+    {
+      background-color: white;
+      color: var(--color-primary) !important;
+    }
+  }
+
+  .work-slider .workSwiper:hover .swiper-button-prev,
+  .work-slider .workSwiper:hover .swiper-button-next
+  {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media (max-width : 575px) 
+  {
+    .work-slider .swiper-button-prev,
+    .work-slider .swiper-button-next
+    {
+      height: 50px !important;
+      width: 50px !important;
+    }
+  }
+
+  
+  .testimonialSwiper 
+  {
+    padding: 100px 0 !important;
+  }  
+
+  @media (min-width : 991px) 
+  {
+    .testimonialSwiper 
+    {
+      padding: 150px 0 !important;
+    }    
+  }
+
+
+  .testimonial-slider .swiper-button-prev,
+  .testimonial-slider .swiper-button-next
+  {
+    height: 60px !important;
+    width: 60px !important;
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-primary) !important;
+    transition: all .5s ease;
+
+    &:hover 
+    {
+      background-color: var(--color-primary);
+      color: white !important;
+    }
+  }
+
+  .testimonial-slider .swiper-button-prev
+  {
+    top: auto !important; 
+    bottom: 0px !important;
+    left: 40% !important;
+  }
+
+  .testimonial-slider .swiper-button-next
+  {
+    top: auto !important;
+    bottom: 0px !important;
+    right: 40% !important;
+  }
+
+
+  @media (max-width : 767px) 
+  {
+
+    .testimonial-slider .swiper-button-prev,
+    .testimonial-slider .swiper-button-next
+    {
+      height: 50px !important;
+      width: 50px !important;
+    }
+
+    .testimonial-slider .swiper-button-prev
+    {
+      left: 30% !important;
+    }
+    .testimonial-slider .swiper-button-next
+    {
+      right: 30% !important;
+    }
+  }
+
+  
 
 }
 
