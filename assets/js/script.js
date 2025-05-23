@@ -82,3 +82,34 @@ accordionButtons.forEach(button => {
     }
   });
 });
+
+
+// Scroll To top
+let scroll_top = document.querySelector("#scroll-top");
+
+window.addEventListener("scroll", function()
+{
+  let scrollY = this.window.scrollY;
+  if(scrollY > 100)
+  {
+     scroll_top.classList.remove("invisible");
+    scroll_top.classList.remove("opacity-0");
+  }
+  else 
+  {
+
+    scroll_top.classList.add("invisible");
+    scroll_top.classList.add("opacity-0");
+  }
+})
+
+
+scroll_top.addEventListener("click", function()
+{
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+})
+
