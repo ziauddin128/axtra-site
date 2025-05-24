@@ -30,6 +30,7 @@
 
 @layer components
 {
+
   .container
   {
     @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] mx-auto px-[20px] md:px-[50px];
@@ -47,27 +48,27 @@
 
   .service-item h3 
   {
-    @apply font-medium text-3xl md:text-2xl lg:text-4xl uppercase leading-[1.4];
+    @apply font-medium text-3xl md:text-2xl lg:text-4xl uppercase leading-[1.4] relative z-[2];
   }
 
   .service-item p 
   {
-    @apply text-[18px] mb-5;
+    @apply text-[18px] mb-5 relative z-[2];
   }
 
   .service-item ul li 
   {
-    @apply text-[18px] mt-1;
+    @apply text-[18px] mt-1 relative z-[2];
   }
 
   .service-item__right 
   {
-    @apply flex items-center justify-start md:justify-end;
+    @apply flex items-center justify-start md:justify-end relative z-[2];
   }
 
   .service-item img 
   {
-    @apply opacity-0 pointer-events-none h-[140%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999];
+    @apply invisible md:visible opacity-0 pointer-events-none md:h-[100%] lg:h-[140%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-1;
   }
 
 
@@ -194,12 +195,6 @@
 
 @layer utilities
 {
-
-  /* .nav-link 
-  {
-    @apply text-[16px] font-normal uppercase  flex gap-0 items-center py-[27px];
-  } */
-
   .nav-link {
     @apply text-[16px] font-normal uppercase flex gap-0 items-center py-[27px];
   }
