@@ -10,17 +10,16 @@
 
     <!-- Style Css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Locomotive Css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
 
     <!-- Font Awesome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/> 
 
-    <!-- wiper's CSS -->
+    <!-- Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-    <!-- Locomotive Css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
 </head>
 <body>
 
@@ -310,10 +309,13 @@
 
   </section>
 
-  <!-- To Top -->
-  <button class="fixed bottom-10 right-5 h-[50px] w-[50px] rounded-full bg-primary cursor-pointer text-white text-[16px] z-50 mix-blend-exclusion duration-500 invisible opacity-0" id="scroll-top">
-        <i class="fa-solid fa-arrow-up text-inherit"></i>
-  </button>
+
+  <!-- Cursor first Circle -->
+  <div id="circle1" class="circle w-[45px] h-[45px] rounded-full border border-purple-600 mix-blend-difference"></div>
+
+  <!-- Cursor second Circle -->
+  <div id="circle2" class="circle w-[8px] h-[8px] rounded-full bg-purple-600 mix-blend-difference"></div>
+
 
   <main id="main">
 
@@ -754,8 +756,9 @@
         });
     </script>
 
-    <!-- Why Choose Us -->
-    <section class="why-us">
+
+    <!-- Why Choose Us  -->
+    <section class="why-us relative">
 
         <div class="why-us__one hidden xl:flex justify-center items-center bg-[#fffaf0] h-[calc(100vh-80px)] w-full">
             <h1 class="text-[200px] font-medium text-center uppercase leading-[1]">why <br>choose us</h1>
@@ -886,7 +889,6 @@
             </div>
 
         </div>
-
 
     </section>
 
@@ -1234,22 +1236,20 @@
      
     </section>
 
-
   </main>
-
-   
-
- 
 
 
   <!-- Locomotive -->
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> 
+
   <!-- GSap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
   <!-- ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> 
-
+  
   <!-- Cmn Script -->
   <script src="assets/js/script.js"></script>
+ 
 </body>
 </html>

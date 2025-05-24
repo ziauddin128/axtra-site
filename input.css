@@ -31,6 +31,10 @@
 @layer components
 {
 
+   .circle {
+      @apply pointer-events-none fixed top-0 left-0 translate-x-[-50%] translate-y-[-50%] z-[99999];
+    }
+
   .container
   {
     @apply sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] mx-auto px-[20px] md:px-[50px];

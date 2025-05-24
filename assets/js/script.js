@@ -1,44 +1,4 @@
 
-/* // Nav bar border bottom
-let nav_bar = document.querySelector(".nav-bar");
-window.addEventListener("scroll", function()
-{
-  let scrollY = this.window.scrollY;
-  if(scrollY > 10)
-  {
-    nav_bar.classList.add("border-b");
-    nav_bar.classList.add("border-[#efefef]");
-  }
-  else 
-  {
-    nav_bar.classList.remove("border-b");
-    nav_bar.classList.remove("border-[#efefef]");
-  }
-})
-
-// Scroll To top
-let scroll_top = document.querySelector("#scroll-top");
-
-window.addEventListener("scroll", function () {
-
-  console.log('hello');
-
-  if (window.scrollY > 100) {
-    scroll_top.classList.remove("invisible", "opacity-0");
-  } else {
-    scroll_top.classList.add("invisible", "opacity-0");
-  }
-}); */
-
-// Scroll the whole page to top when button clicked
-scroll_top.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
-
 // Handle Nav Search
 function handle_nav_search()
 {
@@ -81,37 +41,64 @@ accordionButtons.forEach(button => {
       content.classList.remove('hidden');
     }
   });
-});
-
+}); 
 
 
 // Allowing Locomotive work with ScrollTrigger And GSap
 
-// function locomotive()
-// {
-//     gsap.registerPlugin(ScrollTrigger);
-//     const locoScroll = new LocomotiveScroll({
-//     el: document.querySelector("#main"),
-//     smooth: true
-//     });
-//     locoScroll.on("scroll", ScrollTrigger.update);
-//     ScrollTrigger.scrollerProxy("#main", {
-//     scrollTop(value) {
-//         return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-//     }, 
-//     getBoundingClientRect() {
-//         return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-//     },
-//     pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-//     });
+function locomotive() {
+    gsap.registerPlugin(ScrollTrigger);
 
-//     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-//     ScrollTrigger.refresh();
-// }
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true
+    });
 
-// locomotive();  
+    locoScroll.on("scroll", (args) => {
+        ScrollTrigger.update();
 
+        // navbar 
+        let scrollY = args.scroll.y;
+        let nav_bar = document.querySelector(".nav-bar");
+        if (scrollY > 10) {
+            nav_bar.classList.add("border-b", "border-[#efefef]");
+        } else {
+            nav_bar.classList.remove("border-b", "border-[#efefef]");
+        }
+    });
 
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        },
+        pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+
+    setTimeout(() => {  
+        locoScroll.destroy();
+    }, 0);
+    setTimeout(() => {  
+        locoScroll.init();
+    }, 50);
+    setTimeout(() => {  
+        locoScroll.update();
+    }, 1000);
+}
+
+locomotive();  
 
 
 // Animation with GSap
@@ -498,5 +485,51 @@ tl8.from(".blog-card", {
   duration: 1.2,
   ease: "sine.out"
 }, "-=0.8"); 
+
+// Mouse Circle Move
+
+function followUpMouse()
+{
+
+  const circle1 = document.getElementById("circle1");
+  const circle2 = document.getElementById("circle2");
+
+  let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  let pos1 = { x: mouse.x, y: mouse.y };
+  let pos2 = { x: mouse.x, y: mouse.y };
+
+  // mouse position
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  gsap.ticker.add(() => {
+    const ease1 = 0.2;
+    const ease2 = 0.1;
+
+    pos1.x += (mouse.x - pos1.x) * ease1;
+    pos1.y += (mouse.y - pos1.y) * ease1;
+
+    pos2.x += (pos1.x - pos2.x) * ease2;
+    pos2.y += (pos1.y - pos2.y) * ease2;
+
+    gsap.set(circle1, {
+      x: pos1.x,
+      y: pos1.y
+    });
+
+    gsap.set(circle2, {
+      x: pos2.x,
+      y: pos2.y
+    });
+  });
+
+}
+
+followUpMouse();
+
+
+
 
 
